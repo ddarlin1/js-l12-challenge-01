@@ -22,9 +22,11 @@ const displayImage = function (randomImage) {
     const imageAddress = randomImage.download_url;
     authorSpan.innerText = author;
     img.src = imageAddress;
+    img.classList.add("image-fade-in");
     imgDiv.classList.remove("hide");
 };
 
 button.addEventListener("click", function () {
+    img.classList.remove("image-fade-in");
     getImage();
 });
